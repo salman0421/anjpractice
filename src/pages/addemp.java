@@ -9,6 +9,7 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 public class addemp extends face{
@@ -17,6 +18,8 @@ public class addemp extends face{
 @Test(priority=6)
 public void Adda() throws InterruptedException, AWTException{
 	f.thred();
+	WebElement ad=driver.findElement(By.xpath("//li[@id='pim']"));
+	
 	//f.ademppp("martha","anjaiah");
 	driver.findElement(By.xpath("//input[contains(@name,'txtEmpFirstName')]")).sendKeys("martha");
 	driver.findElement(By.xpath("//input[contains(@name,'txtEmpLastName')]")).sendKeys("anjaiah");
